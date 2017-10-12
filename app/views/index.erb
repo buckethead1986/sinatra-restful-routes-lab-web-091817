@@ -1,0 +1,9 @@
+
+<%if @recipes.length == 0%>
+  <h1><%="No recipes to show!"%></h1>
+<%else%>
+  <h1>Recipes!</h1>
+  <%@recipes.each_with_index do |recipe, index|%>
+  <a href="/recipes/<%=recipe.id%>"><%=index + 1%>. <%=recipe.name%></a></br>
+  <%end%>
+<%end%>
